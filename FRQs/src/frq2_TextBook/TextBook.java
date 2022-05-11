@@ -25,7 +25,7 @@ public class TextBook extends Book {
     }
 
     public boolean canSubstituteFor(TextBook t) {
-        return getTitle() == t.getTitle()
-            || getEdition() >= t.getEdition();
+        return getTitle().equals(t.getTitle())
+            && getEdition() >= t.getEdition();
     }
 }
